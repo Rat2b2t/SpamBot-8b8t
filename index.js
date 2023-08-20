@@ -41,7 +41,16 @@ bot.on("message", (message) => {
                         });
                     }
                 } else {
-                    bot.chat(randomMessage)
+                    fs.readFile("random_message.json", (err, data) => {
+                        if (err) {
+                            console.error(err);
+                            return;
+                        }
+                        const messages = JSON.parse(data);
+                        const randomIndex = Math.floor(Math.random() * messages.length);
+                        const randomMessage = messages[randomIndex];
+                        bot.chat(randomMessage)
+                    })
                 }
             }, config.spam_interval_in_seconds * 1000);
         }
