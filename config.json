@@ -1,0 +1,8 @@
+{
+    "host": "8b8t.me",
+    "username": "ExampleUsername",
+    "version": "1.12.2",
+    "auth_password": "ExamplePassword",
+    "spam_interval_in_seconds": 69,
+    "whisper_random_messages": true
+}
