@@ -1,5 +1,9 @@
 # How to use
-too lazy to do this part. Anyways, do forgive me for the shitty north korean code. If you would like to contribute / report bugs, feel free to create an issue / pull request. lol
+1. Get [Node.js](https://nodejs.org)
+2. Downlod and unzip the repo / `` git clone https://github.com/Rat2b2t/SpamBot-8b8t ``
+3. Install [Mineflayer](https://github.com/PrismarineJS/mineflayer) with `` npm i mineflayer ``
+4. Edit the config fles
+5. Run the script with ``node index.js``
 
 # Config Format [config.json]
 ```
@@ -29,3 +33,5 @@ Feel free to change any of these values
 ```
 1) Discord [Bypass with: Disc0rd]
 ```
+ # Issues/Suggestions/Contribution
+ Feel free to open an issue or pull request. Do ignore my north korean code, wrote it in like 10 mins.
