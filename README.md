@@ -8,7 +8,7 @@
 # Config Format [config.json]
 ```
 {
-    "host": "8b8t.me", // Server IP
+    "host": "anarchy.8b8t.me", // Server IP
     "username": "ExampleUsername", // Bot Username
     "version": "1.12.2", // Bot Version
     "auth_password": "ExamplePassword", // Bot Password when logging in [/login - /register]
@@ -27,11 +27,6 @@ Feel free to change any of these values
     "i am popbob guys",
     "BigRatMonster based god!"
 ]
-```
-
-# Known Blocked Words [8b8t.me]
-```
-1) Discord [Bypass with: Disc0rd]
 ```
  # Issues/Suggestions/Contribution
  Feel free to open an issue or pull request. Do ignore my north korean code, wrote it in like 10 mins.
