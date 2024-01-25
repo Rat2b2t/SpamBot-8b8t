@@ -16,7 +16,7 @@ bot.on("message", (message) => {
   });
 
   bot.on("messagestr", (message) => {
-    if (message.includes("Please, login with the command: /login <password>")) {
+    if (message.includes("/login <password>")) {
         bot.chat(`/login ${config["auth_password"]}`);
     } else {
         if (message.includes("register")) {
