@@ -5,7 +5,8 @@ const config = require("./config.json");
 const bot = mineflayer.createBot({
     host: config.host,
     username: config.username,
-    version: config.version
+    version: config.version,
+    hideErrors: true
 })
 
 bot.on('kicked', console.log)
@@ -13,15 +14,17 @@ bot.on('error', console.log)
 
 bot.on("message", (message) => {
     console.log(message.toAnsi());
-  });
+});
 
-  bot.on("messagestr", (message) => {
-    if (message.includes("/login <password>")) {
+bot.on("messagestr", (message) => {
+    if (message.includes("Are you using a premium account?")) {
+        bot.chat("/cracked")
+    } else if (message.includes("/login <password>")) {
         bot.chat(`/login ${config["auth_password"]}`);
     } else {
         if (message.includes("register")) {
-            bot.chat(`/register ${config[auth_password]}`)
-        } else if (message === `Welcome ${bot.username} to 8builders8tools`) {
+            bot.chat(`/register ${config["auth_password"]} ${config["auth_password"]}`)
+        } else if (message === `Welcome ${bot.username} to 8builders8tools` || message === "You are already logged in." || message === "Your login session has been continued.") {
             setInterval(() => {
                 if (config.whisper_random_messages) {
                     let onlinePlayers = Object.keys(bot.players);
@@ -56,3 +59,9 @@ bot.on("message", (message) => {
         }
     }  
 });
+
+bot.once("spawn", () => {
+    setTimeout(() => {
+        bot.chat("/8b8t")
+    }, 8000)
+})
